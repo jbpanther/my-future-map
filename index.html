@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Possible Futures — [Your Name]</title>
+
+  <!-- Leaflet (map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SECTION 1: HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">Mapping and Our Search for Meaning</p>
+      <h1 class="hero-title">Jack Butler</h1>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <p class="hero-date">Commencement — May 18, 2026</p>
+      <a href="#about" class="hero-scroll">↓ Begin the journey</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2: COMPASS ROSE / WHO I AM
+  ============================================================ -->
+  <section class="panel panel-light" id="about">
+    <div class="panel-inner two-col" data-aos="fade-up">
+      <div class="compass-image-wrap">
+        <!-- Replace with your own image if desired, or leave the SVG compass -->
+        <svg class="compass-rose" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="95" fill="none" stroke="#c9b99a" stroke-width="2"/>
+          <circle cx="100" cy="100" r="6" fill="#8b6f47"/>
+          <!-- N -->
+          <polygon points="100,10 92,90 100,80 108,90" fill="#5a3e2b"/>
+          <text x="100" y="8" text-anchor="middle" font-family="serif" font-size="12" fill="#5a3e2b">N</text>
+          <!-- S -->
+          <polygon points="100,190 92,110 100,120 108,110" fill="#c9b99a"/>
+          <text x="100" y="200" text-anchor="middle" font-family="serif" font-size="12" fill="#5a3e2b">S</text>
+          <!-- E -->
+          <polygon points="190,100 110,92 120,100 110,108" fill="#c9b99a"/>
+          <text x="198" y="104" text-anchor="middle" font-family="serif" font-size="12" fill="#5a3e2b">E</text>
+          <!-- W -->
+          <polygon points="10,100 90,92 80,100 90,108" fill="#c9b99a"/>
+          <text x="6" y="104" text-anchor="middle" font-family="serif" font-size="12" fill="#5a3e2b">W</text>
+        </svg>
+      </div>
+      <div class="compass-text">
+        <h2 class="section-title">Who I Am, Right Now</h2>
+        <p>
+          <!-- REPLACE THIS with your own reflection about who you are as you approach graduation -->
+          Here I stand at the edge of something new. Four years of questions, discoveries, and becoming have brought me to this moment — diploma in hand, compass in heart, the road ahead unmapped.
+        </p>
+        <p>
+          <!-- Add another paragraph about your passions, values, or what drives you -->
+          My passions are [your passions here]. The person I am becoming is shaped by [what has shaped you]. I leave this place carrying [what you take with you].
+        </p>
+        <p class="journal-note">— Written at graduation, May 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3: INTERACTIVE MAP
+  ============================================================ -->
+  <section class="panel panel-dark" id="map-section">
+    <div class="panel-inner" data-aos="fade-up">
+      <h2 class="section-title light">My Map of Possible Futures</h2>
+      <p class="section-subtitle light">Click the markers to explore the places that might be significant to me.</p>
+    </div>
+    <div id="map-container"></div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4: TIMELINE
+  ============================================================ -->
+  <section class="panel panel-cream" id="timeline">
+    <div class="panel-inner" data-aos="fade-up">
+      <h2 class="section-title">Charting the Course</h2>
+      <p class="section-subtitle">From the days after graduation to the decades ahead.</p>
+    </div>
+    <div class="timeline-track">
+
+      <div class="timeline-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="timeline-era">Summer 2026</span>
+        <h3>The First Steps</h3>
+        <p>
+          <!-- Describe your immediate plans after graduation — summer, first job, travel, etc. -->
+          The weeks right after commencement look like [your plans here]. I imagine myself [what you see yourself doing].
+        </p>
+      </div>
+
+      <div class="timeline-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="timeline-era">2027 – 2028</span>
+        <h3>Finding My Footing</h3>
+        <p>
+          <!-- Your 1-2 year vision: where you might live, early career, what you're building -->
+          By my mid-twenties, I hope to be [your 2-year vision]. The foundation I'm building is [describe it].
+        </p>
+      </div>
+
+      <div class="timeline-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="timeline-era">2031 – 2036</span>
+        <h3>The Middle Distance</h3>
+        <p>
+          <!-- Your 5-10 year vision: career, relationships, place in the world -->
+          A decade from now, I see myself [your 5-10 year vision]. What matters most to me then will be [describe].
+        </p>
+      </div>
+
+      <div class="timeline-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="timeline-era">2040s & Beyond</span>
+        <h3>The Horizon</h3>
+        <p>
+          <!-- The long dream — legacy, impact, who you want to have become -->
+          The dream I carry into the decades ahead is [your long-term dream]. The legacy I want to leave is [describe].
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: LOCAL / NATIONAL / GLOBAL TRIPTYCH
+  ============================================================ -->
+  <section class="panel panel-light" id="scales">
+    <div class="panel-inner" data-aos="fade-up">
+      <h2 class="section-title">Three Scales of a Future</h2>
+      <p class="section-subtitle">Local, national, and global — how my life might ripple outward.</p>
+    </div>
+    <div class="triptych" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="triptych-panel triptych-local">
+        <div class="triptych-label">Local</div>
+        <!-- Add an image: <img src="images/local-photo.jpg" alt="Local future" /> -->
+        <div class="triptych-placeholder">[ Add a local photo ]</div>
+        <div class="triptych-text">
+          <h3>[Your City / Region]</h3>
+          <p>
+            <!-- Your local future: community, neighborhood, roots -->
+            At the local level, I imagine myself [local vision — community, where you'll live, local impact].
+          </p>
+        </div>
+      </div>
+
+      <div class="triptych-panel triptych-national">
+        <div class="triptych-label">National</div>
+        <!-- Add an image: <img src="images/national-photo.jpg" alt="National future" /> -->
+        <div class="triptych-placeholder">[ Add a national photo ]</div>
+        <div class="triptych-text">
+          <h3>[Your Country / Region]</h3>
+          <p>
+            <!-- Your national future: career, movement, contribution to the country -->
+            Across the country, I see myself [national vision — where you might move, national-scale work].
+          </p>
+        </div>
+      </div>
+
+      <div class="triptych-panel triptych-global">
+        <div class="triptych-label">Global</div>
+        <!-- Add an image: <img src="images/global-photo.jpg" alt="Global future" /> -->
+        <div class="triptych-placeholder">[ Add a global photo ]</div>
+        <div class="triptych-text">
+          <h3>[Your Global Dream]</h3>
+          <p>
+            <!-- Your global future: international aspirations, global contribution -->
+            On the world stage, my dreams take me [global vision — international aspirations, global impact].
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6: WORDS & IMAGES COLLAGE
+  ============================================================ -->
+  <section class="panel panel-dark" id="collage">
+    <div class="panel-inner" data-aos="fade-up">
+      <h2 class="section-title light">Words & Images</h2>
+      <p class="section-subtitle light">Fragments of the future, pinned to the wall.</p>
+    </div>
+    <div class="collage-grid" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Cell 1: wide image -->
+      <div class="collage-item span-2">
+        <!-- <img src="images/collage-1.jpg" alt="" /> -->
+        <div class="collage-placeholder">[ Photo 1 — wide ]</div>
+        <span class="overlay-text">"[A word or short quote about your future]"</span>
+      </div>
+
+      <!-- Cell 2: tall image -->
+      <div class="collage-item tall">
+        <!-- <img src="images/collage-2.jpg" alt="" /> -->
+        <div class="collage-placeholder">[ Photo 2 — tall ]</div>
+        <span class="overlay-text">"[A dream in one word]"</span>
+      </div>
+
+      <!-- Cell 3: text block -->
+      <div class="collage-item collage-text-block">
+        <p>"[A quote, lyric, or phrase that captures where you're headed — something personal and meaningful]"</p>
+      </div>
+
+      <!-- Cell 4: standard image -->
+      <div class="collage-item">
+        <!-- <img src="images/collage-3.jpg" alt="" /> -->
+        <div class="collage-placeholder">[ Photo 3 ]</div>
+        <span class="overlay-text">[Place or idea]</span>
+      </div>
+
+      <!-- Cell 5: wide image -->
+      <div class="collage-item span-2">
+        <!-- <img src="images/collage-4.jpg" alt="" /> -->
+        <div class="collage-placeholder">[ Photo 4 — wide ]</div>
+        <span class="overlay-text">"[Another phrase]"</span>
+      </div>
+
+      <!-- Cell 6: standard image -->
+      <div class="collage-item">
+        <!-- <img src="images/collage-5.jpg" alt="" /> -->
+        <div class="collage-placeholder">[ Photo 5 ]</div>
+        <span class="overlay-text">[Your word]</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <p class="footer-class">Mapping and Our Search for Meaning &nbsp;·&nbsp; Spring 2026</p>
+    <p class="footer-name">[Your Name]</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
