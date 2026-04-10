@@ -14,8 +14,8 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  color: #3a2e28;
-  background: #faf7f2;
+  color: #1a3a5c;
+  background: #f0f6ff;
   line-height: 1.7;
 }
 
@@ -36,22 +36,22 @@ h1, h2, h3 {
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   margin-bottom: 0.5rem;
-  color: #3a2e28;
+  color: #1a3a5c;
 }
 
 .section-title.light {
-  color: #f5efe6;
+  color: #ffffff;
 }
 
 .section-subtitle {
   font-size: 1rem;
-  color: #7a6a5a;
+  color: #4a7aaa;
   margin-bottom: 2.5rem;
   font-style: italic;
 }
 
 .section-subtitle.light {
-  color: #c9b99a;
+  color: #a0c4e8;
 }
 
 /* ============================================================
@@ -61,9 +61,9 @@ h1, h2, h3 {
   padding: 5rem 1.5rem;
 }
 
-.panel-light  { background: #faf7f2; }
-.panel-cream  { background: #f5ede0; }
-.panel-dark   { background: #2e2218; }
+.panel-light  { background: #f0f6ff; }
+.panel-cream  { background: #dce8f5; }
+.panel-dark   { background: #0d2137; }
 
 .panel-inner {
   max-width: 960px;
@@ -97,18 +97,17 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* Map texture: a subtle topo/grid pattern drawn with CSS */
-  background-color: #2e2218;
+  background-color: #0d2137;
   background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(201,185,154,0.12) 40px),
-    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(201,185,154,0.12) 40px);
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(107,174,214,0.12) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(107,174,214,0.12) 40px);
   overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(46,34,24,0.3) 0%, rgba(46,34,24,0.85) 100%);
+  background: radial-gradient(ellipse at center, rgba(13,33,55,0.3) 0%, rgba(13,33,55,0.85) 100%);
 }
 
 .hero-content {
@@ -121,13 +120,13 @@ h1, h2, h3 {
   font-size: 0.85rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #c9b99a;
+  color: #6baed6;
   margin-bottom: 1rem;
 }
 
 .hero-title {
   font-size: clamp(3rem, 8vw, 6rem);
-  color: #f5efe6;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
@@ -135,7 +134,7 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: clamp(1.1rem, 3vw, 1.6rem);
-  color: #c9b99a;
+  color: #6baed6;
   min-height: 2rem;
   margin-bottom: 1rem;
 }
@@ -143,26 +142,26 @@ h1, h2, h3 {
 .hero-date {
   font-size: 0.9rem;
   letter-spacing: 0.15em;
-  color: #8b7a6a;
+  color: #5a8ab0;
   margin-bottom: 2.5rem;
 }
 
 .hero-scroll {
   display: inline-block;
-  color: #c9b99a;
+  color: #6baed6;
   text-decoration: none;
   font-size: 0.85rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  border: 1px solid rgba(201,185,154,0.4);
+  border: 1px solid rgba(107,174,214,0.4);
   padding: 0.6rem 1.4rem;
   border-radius: 2px;
   transition: background 0.2s, color 0.2s;
 }
 
 .hero-scroll:hover {
-  background: rgba(201,185,154,0.15);
-  color: #f5efe6;
+  background: rgba(107,174,214,0.15);
+  color: #ffffff;
 }
 
 /* ============================================================
@@ -177,12 +176,12 @@ h1, h2, h3 {
 .compass-text p {
   margin-bottom: 1rem;
   font-size: 1.05rem;
-  color: #4a3e32;
+  color: #1a3a5c;
 }
 
 .journal-note {
   font-style: italic;
-  color: #9a8a78;
+  color: #5a8ab0;
   font-size: 0.9rem !important;
   margin-top: 1.5rem !important;
 }
@@ -197,8 +196,89 @@ h1, h2, h3 {
 #map-container {
   width: 100%;
   height: 500px;
-  border-top: 3px solid #5a3e2b;
-  border-bottom: 3px solid #5a3e2b;
+  border-top: 3px solid #2a6aaa;
+  border-bottom: 3px solid #2a6aaa;
+}
+
+#map-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.2rem;
+}
+
+#map-nav button {
+  background: transparent;
+  border: 1px solid rgba(107,174,214,0.5);
+  color: #6baed6;
+  font-size: 1.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+#map-nav button:hover {
+  background: rgba(107,174,214,0.15);
+  color: #ffffff;
+}
+
+#map-nav-label {
+  color: #a0c4e8;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  min-width: 160px;
+  text-align: center;
+}
+
+/* ============================================================
+   FIRST WEEKS
+============================================================ */
+.first-weeks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.first-weeks-card {
+  background: white;
+  border: 1px solid #b0cce8;
+  border-top: 3px solid #6baed6;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.first-weeks-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.first-weeks-card h3 {
+  font-size: 1.05rem;
+  color: #1a3a5c;
+  margin-bottom: 0.6rem;
+}
+
+.first-weeks-card p {
+  font-size: 0.9rem;
+  color: #2a5a8a;
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+  .first-weeks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .first-weeks-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================================
@@ -216,13 +296,13 @@ h1, h2, h3 {
   max-width: 1100px;
   margin: 0 auto;
   scrollbar-width: thin;
-  scrollbar-color: #c9b99a #f5ede0;
+  scrollbar-color: #6baed6 #dce8f5;
 }
 
 .timeline-card {
   flex: 0 0 240px;
   background: white;
-  border: 1px solid #ddd;
+  border: 1px solid #b0cce8;
   padding: 1.5rem;
   box-shadow: 4px 4px 14px rgba(0,0,0,0.1);
   position: relative;
@@ -236,19 +316,19 @@ h1, h2, h3 {
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #8b6f47;
+  color: #3a7ab8;
   margin-bottom: 0.5rem;
 }
 
 .timeline-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
-  color: #3a2e28;
+  color: #1a3a5c;
 }
 
 .timeline-card p {
   font-size: 0.9rem;
-  color: #5a4a3a;
+  color: #2a5a8a;
   line-height: 1.6;
 }
 
@@ -296,14 +376,14 @@ h1, h2, h3 {
   justify-content: center;
   font-size: 0.85rem;
   font-style: italic;
-  color: #9a8a78;
-  background: #e8e0d4;
-  border-bottom: 2px solid #c9b99a;
+  color: #5a8ab0;
+  background: #c8dff0;
+  border-bottom: 2px solid #6baed6;
 }
 
-.triptych-local  { background: #f0ebe3; }
-.triptych-national { background: #e8dfd4; }
-.triptych-global { background: #dfd4c8; }
+.triptych-local  { background: #e8f0f8; }
+.triptych-national { background: #dce8f5; }
+.triptych-global { background: #d0e0f0; }
 
 .triptych-label {
   position: absolute;
@@ -312,8 +392,8 @@ h1, h2, h3 {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background: #2e2218;
-  color: #c9b99a;
+  background: #0d2137;
+  color: #6baed6;
   padding: 0.25rem 0.6rem;
   z-index: 1;
 }
@@ -326,12 +406,12 @@ h1, h2, h3 {
 .triptych-text h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #3a2e28;
+  color: #1a3a5c;
 }
 
 .triptych-text p {
   font-size: 0.9rem;
-  color: #5a4a3a;
+  color: #2a5a8a;
   line-height: 1.65;
 }
 
@@ -372,12 +452,12 @@ h1, h2, h3 {
 .collage-placeholder {
   width: 100%;
   height: 100%;
-  background: #3a2e28;
+  background: #1a3a5c;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  color: #6a5a48;
+  color: #5a8ab0;
   font-style: italic;
 }
 
@@ -385,7 +465,7 @@ h1, h2, h3 {
 .collage-item.tall   { grid-row: span 2; }
 
 .collage-text-block {
-  background: #8b6f47;
+  background: #3a7ab8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -395,7 +475,7 @@ h1, h2, h3 {
 .collage-text-block p {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  color: #f5efe6;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 1.6;
   text-align: center;
@@ -425,7 +505,7 @@ h1, h2, h3 {
    FOOTER
 ============================================================ */
 .site-footer {
-  background: #1c1510;
+  background: #081525;
   text-align: center;
   padding: 2.5rem 1.5rem;
 }
@@ -434,12 +514,12 @@ h1, h2, h3 {
   font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #6a5a48;
+  color: #5a8ab0;
   margin-bottom: 0.4rem;
 }
 
 .footer-name {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
-  color: #c9b99a;
+  color: #6baed6;
 }
